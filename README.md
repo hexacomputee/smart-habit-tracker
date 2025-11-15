@@ -19,11 +19,12 @@ Enhanced with dark-mode dashboard, confetti animations, and real-time charts. Pe
 - **Canvas Confetti** – fun visual feedback
 
 ## 📂 Folder Structure
-/smart-habit-tracker
+/ smart-habit-tracker
 - index.html
 - style.css (optional)
 - script.js
-/assets
+  
+/ assets
 - charts.js
   
 
