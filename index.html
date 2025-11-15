@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Habit Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex">
+
+  <!-- Sidebar -->
+  <div class="w-64 bg-gray-800 p-6 flex flex-col">
+    <h1 class="text-2xl font-bold mb-6">Habit Tracker</h1>
+    <nav class="flex flex-col space-y-3">
+      <button id="dashboardBtn" class="hover:text-blue-400">Dashboard</button>
+      <button id="habitsBtn" class="hover:text-blue-400">Habits</button>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex-1 p-6">
+    <!-- Add Habit Section -->
+    <div id="habitsSection" class="mb-6 max-w-md">
+      <input type="text" id="habitInput" placeholder="Add a new habit"
+        class="w-full p-3 rounded-md text-gray-900 mb-2" />
+      <button id="addHabitBtn" class="w-full bg-blue-600 hover:bg-blue-700 p-3 rounded-md">Add Habit</button>
+      <ul id="habitList" class="mt-4 space-y-2"></ul>
+    </div>
+
+    <!-- Dashboard Section -->
+    <div id="dashboardSection" class="hidden max-w-md">
+      <div class="mb-6 text-xl font-semibold">
+        Productivity Score: <span id="score">0</span>%
+      </div>
+      <canvas id="habitChart"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
